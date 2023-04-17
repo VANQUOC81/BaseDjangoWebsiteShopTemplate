@@ -17,10 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from products import views
+#from django.views.generic.base import TemplateView
 
-# when no app is in the url default to product app > views > index
+# when no app is in the url '' default to product app > views > index
 urlpatterns = [
     path('', views.index),
+    #path('', TemplateView.as_view(template_name='products/index.html'), name='index'),
     path('admin/', admin.site.urls),
-    path('products/', include('products.urls'))
+    path('products/', include('products.urls')),
+    path('accounts/', include('django.contrib.auth.urls'))
 ]
