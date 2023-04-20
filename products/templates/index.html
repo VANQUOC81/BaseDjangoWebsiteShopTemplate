@@ -33,6 +33,7 @@
 
    {% else %}
     <p>You are not logged in</p>
+    <!-- 'login' is a name of an URL pattern within the built-in app 'django.contrib.auth.urls' -->
     <a href="{% url 'login' %}">Log In</a>
    {% endif %}
    

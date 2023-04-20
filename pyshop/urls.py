@@ -24,6 +24,9 @@ urlpatterns = [
     path('', views.index),
     #path('', TemplateView.as_view(template_name='products/index.html'), name='index'),
     path('admin/', admin.site.urls),
+    # specifiying your own accounts path on top of built-in auth app, Django with pick the first match
+    path('accounts/', include('accounts.urls')),
+    # below is the built-in auth app accounts path
+    path('accounts/', include('django.contrib.auth.urls')),
     path('products/', include('products.urls')),
-    path('accounts/', include('django.contrib.auth.urls'))
 ]
