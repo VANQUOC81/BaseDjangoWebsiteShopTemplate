@@ -47,9 +47,9 @@ In Django, python manage.py is a command-line utility used to interact with a Dj
 * Creating a new Django project: python manage.py startproject project_name
 * Running the development server: python manage.py runserver
 * Creating a new app within a Django project: python manage.py startapp app_name
-* Creating database tables: python manage.py migrate
 * Creating a new superuser: python manage.py createsuperuser
+* Creating migration files based on models: python manage.py makemigrations
+* Apply migrations to the database: python manage.py migrate
 * Running tests: python manage.py test
-* Generating database schema: python manage.py makemigrations
 
 Essentially, python manage.py serves as a tool to execute various Django commands and manage a Django project.
