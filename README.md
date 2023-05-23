@@ -44,7 +44,7 @@ In Django, an app is a web application that does something - e.g. a blog system,
 ### Django manage.py file
 In Django, python manage.py is a command-line utility used to interact with a Django project. It is used to perform a variety of tasks, such as:
 
-* Creating a new Django project: python manage.py startproject project_name
+* Creating a new Django project in current folder: python manage.py startproject project_name .
 * Running the development server: python manage.py runserver
 * Creating a new app within a Django project: python manage.py startapp app_name
 * Creating a new superuser: python manage.py createsuperuser

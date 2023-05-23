@@ -7,10 +7,31 @@
 <h2>Log In</h2>
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Log In</button>
-  <p>
-    <a href="{% url 'signup' %}">Sign Up</a>
-  </p>
+  <!-- {{ form.as_p }} -->
+
+  <div class="mb-3 col-2">
+    <input type="text" class="form-control" name="username" autofocus autocapitalize="none" required id="id_username" autocomplete="username" maxlength="150" placeholder="UserName">
+  </div>
+  <div class="mb-3 col-2">
+    <input type="password" class="form-control" name="password" required id="id_password" autocomplete="current-password" maxlength="128" placeholder="Password">
+  </div>
+
+  <button type="submit" class="btn btn-primary"">Log In</button>
+
+    <div class="form-text">Not registrered yet?
+    <a href="{% url 'signup' %}">Sign Up Here</a>
+  </div>
+
+  <br/>
+
+  <!-- Display non-field errors -->
+  {% if form.non_field_errors %}
+    <div class="alert alert-danger">
+      {% for error in form.non_field_errors %}
+        {{ error }}
+      {% endfor %}
+    </div>
+  {% endif %}
+
 </form>
 {% endblock %}
